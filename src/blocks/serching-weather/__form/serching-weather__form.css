@@ -1,9 +1,9 @@
 .serching-weather__form {
   width: 68%;
   height: 60px;
-  left: 240px;
-  top: 644px;
   background: #FFF;
   border-radius: 50px;
   box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+  display: flex;
+  align-items: center;
 }

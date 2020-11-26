@@ -1,0 +1,57 @@
+.serching-weather__input {
+  margin-left: 15px;
+  padding: 0;
+  width: 68%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-radius: 50px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #4B5D68;
+}
+
+.serching-weather__input::-webkit-input-placeholder {
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  color: #4B5D68;
+}
+.serching-weather__input::-moz-placeholder {
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  color: #4B5D68;
+}
+.serching-weather__input:-ms-input-placeholder {
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  color: #4B5D68;
+}
+.serching-weather__input::-ms-input-placeholder {
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  color: #4B5D68;
+}
+.serching-weather__input::placeholder {
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  color: #4B5D68;
+}
