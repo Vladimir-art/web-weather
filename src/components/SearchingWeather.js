@@ -8,7 +8,7 @@ function SearchingWeather() {
       </h1>
       <form className="serching-weather__form">
         <input className="serching-weather__input" type="text" placeholder="Enter the city" required />
-        <button className="serching-weather__search" type="submit"></button>
+        <button className="serching-weather__search" type="submit">Search</button>
       </form>
     </section>
   )

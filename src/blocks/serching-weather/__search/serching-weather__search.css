@@ -1,0 +1,31 @@
+.serching-weather__search {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  height: 60px;
+  border: none;
+  background: #9C69E2;
+  border-radius: 50px;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  text-align: center;
+  color: #FFF;
+  box-shadow: -5px 0 5px rgba(75, 93, 104, 0.15);
+
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.serching-weather__search:hover{
+  background: #8f5ad8;
+  box-shadow: -5px 0 5px rgba(75, 93, 104, 0.2);
+}
+
+.serching-weather__search:focus{
+  background: #8f5ad8;
+  box-shadow: -5px 0 5px rgba(75, 93, 104, 0.2);
+}
