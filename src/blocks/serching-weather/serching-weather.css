@@ -1,0 +1,11 @@
+@import url(./__title/serching-weather__title.css);
+@import url(./__form/serching-weather__form.css);
+@import url(./__input/serching-weather__input.css);
+@import url(./__search/serching-weather__serch.css);
+
+
+.serching-weather{
+  max-width: 645px;
+  margin: 0;
+  padding: 0;
+}
