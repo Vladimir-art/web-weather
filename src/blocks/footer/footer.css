@@ -1,0 +1,10 @@
+@import url(./__author/footer__author.css);
+@import url(./__link/footer__link.css);
+@import url(./__icon/footer__icon.css);
+
+.footer {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+  display: flex;
+}
