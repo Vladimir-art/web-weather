@@ -1,0 +1,14 @@
+.serching-weather__error {
+  margin: 20px 0 0 20px;
+  width: 60%;
+  min-height: 30px;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #d82f54;
+
+  visibility: hidden;
+}

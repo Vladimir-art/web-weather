@@ -2,6 +2,7 @@
 @import url(./__form/serching-weather__form.css);
 @import url(./__input/serching-weather__input.css);
 @import url(./__search/serching-weather__search.css);
+@import url(./__error/serching-weather__error.css);
 
 
 .serching-weather{
