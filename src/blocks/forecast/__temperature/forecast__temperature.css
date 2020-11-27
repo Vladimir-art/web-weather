@@ -1,0 +1,11 @@
+.forecast__temperature {
+  margin: 10px 0 10px 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 130%;
+  color: #212353;
+}
