@@ -1,0 +1,11 @@
+@import url(./__date/forecast__date.css);
+@import url(./__temperature/forecast__temperature.css);
+@import url(./__nature/forecast__nature.css);
+
+.forecast{
+  margin: 0;
+  padding: 15px;
+  background: rgba(33, 35, 83, .2);
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(75, 93, 104, 0.15);
+}

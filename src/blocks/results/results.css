@@ -12,4 +12,7 @@
   margin: 0;
   padding: 0;
   width: calc(100% - 645px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
