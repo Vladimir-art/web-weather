@@ -22,6 +22,7 @@ function SearchingResults() {
         <Forecast />
         <Forecast />
         <Forecast />
+        <Forecast />
       </div>
     </section>
   )
