@@ -7,7 +7,7 @@ function SearchingResults() {
       <div className="results__current-weather">
         <div className="results__current-info">
           <h2 className="results__current-title">New York</h2>
-          <p className="results__current-date">27 november, 2020</p>
+          <time className="results__current-date">27 november, 2020</time>
           <h3 className="results__current-temperature">
             +15 &#730;C
             <span className="results__span">&#32;&#47;&#32;</span>
