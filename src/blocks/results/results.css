@@ -8,3 +8,8 @@
 @import url(./__image/results__image.css);
 @import url(./__forecast-weather/results__forecast-weather.css);
 
+.results {
+  margin: 0;
+  padding: 0;
+  width: calc(100% - 645px);
+}
