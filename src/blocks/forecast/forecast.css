@@ -8,4 +8,10 @@
   background: rgba(33, 35, 83, .2);
   border-radius: 25px;
   box-shadow: 5px 5px 5px rgba(75, 93, 104, 0.15);
+  transition: all .3s ease;
+}
+
+.forecast:hover {
+  cursor: pointer;
+  background: rgba(33, 35, 83, .15);
 }
