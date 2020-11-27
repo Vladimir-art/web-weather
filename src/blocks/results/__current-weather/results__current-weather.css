@@ -1,7 +1,11 @@
 .results__current-weather {
   margin: 0;
-  padding: 0;
+  padding: 15px;
   display: flex;
   width: 45%;
   justify-content: space-between;
+
+  background: rgba(33, 35, 83, .2);
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(75, 93, 104, 0.15);
 }
