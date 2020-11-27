@@ -1,4 +1,5 @@
 import React from 'react';
+import Forecast from './Forecast';
 import sunny from '../images/sunny.svg';
 
 function SearchingResults() {
@@ -18,7 +19,9 @@ function SearchingResults() {
         <img className="results__image" src={sunny} alt="weather" />
       </div>
       <div className="results__forecast-weather">
-
+        <Forecast />
+        <Forecast />
+        <Forecast />
       </div>
     </section>
   )
