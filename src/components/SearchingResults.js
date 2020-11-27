@@ -15,7 +15,7 @@ function SearchingResults() {
           </h3>
           <p className="results__current-nature">Sunny</p>
         </div>
-        <img className="results__current-image" src={sunny} alt="weather" />
+        <img className="results__image" src={sunny} alt="weather" />
       </div>
       <div className="results__forecast-weather">
 
