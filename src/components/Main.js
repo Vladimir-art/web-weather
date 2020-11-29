@@ -2,10 +2,12 @@ import React from 'react';
 import SearchingWeather from './SearchingWeather';
 import SearchingResults from './SearchingResults';
 
-function Main() {
+function Main(props) {
   return(
     <main className="main">
-      <SearchingWeather />
+      <SearchingWeather
+        searchCurrent={props.searchCurrent}
+      />
       <SearchingResults />
     </main>
   )
