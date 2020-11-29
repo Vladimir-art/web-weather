@@ -10,7 +10,6 @@ function SearchingResults(props) {
     return date.toLocaleString('en', options);
   }
 
-  console.log(props.currentWeather);
   return (
     <section className={`results ${props.currentWeather ? 'results_active' : ''}`}>
       <div className="results__current-weather">

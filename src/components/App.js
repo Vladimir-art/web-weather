@@ -14,7 +14,6 @@ function App() {
     console.log(value);
     ApiWeather.getCurrentWeather(value)
       .then((data) => {
-        console.log(data);
         if (data.success === false) {
           throw new Error('Введите корректные данные');
         } else {

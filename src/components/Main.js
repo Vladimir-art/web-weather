@@ -10,7 +10,8 @@ function Main(props) {
         error={props.error}
       />
       {
-        props.currentWeather !== null && <SearchingResults
+        props.currentWeather !== null &&
+        <SearchingResults
           currentWeather={props.currentWeather}
           forecast={props.forecast}
         />
