@@ -7,6 +7,7 @@ function Main(props) {
     <main className="main">
       <SearchingWeather
         searchCurrent={props.searchCurrent}
+        error={props.error}
       />
       {
         props.currentWeather !== null && <SearchingResults

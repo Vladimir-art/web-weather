@@ -8,14 +8,17 @@ function App() {
 
   const [current, setCurrent] = React.useState(null);
   const [forecast, setForecast] = React.useState(null);
+  const [error, setError] = React.useState('');
 
   function searchCurrentWeather(value, form) {
     console.log(value);
     ApiWeather.getCurrentWeather(value)
       .then((data) => {
+        console.log(data);
         if (data.success === false) {
           throw new Error('Введите корректные данные');
         } else {
+          setError('');
           setCurrent(data);
           return data;
         }
@@ -27,7 +30,10 @@ function App() {
           })
           .catch((err) => console.log(err));
       })
-      .catch((err) => console.log(err))
+      .catch((err) => {
+        console.log(err);
+        setError(err);
+      })
       .finally(() => {
         form.reset();
       })
@@ -40,6 +46,7 @@ function App() {
         searchCurrent={searchCurrentWeather}
         currentWeather={current}
         forecast={forecast}
+        error={error}
       />
       <Footer />
     </div>

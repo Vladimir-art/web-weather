@@ -28,7 +28,7 @@ function SearchingResults(props) {
       </div>
       <div className="results__forecast-weather">
         {
-          props.forecast !== null && props.forecast.map((item, index) => {
+          props.forecast && props.forecast.dataseries.filter((data, index) => index > 0 && index <= 4).map((item, index) => {
             return (
               <Forecast key={index} forecast={item} />
             )

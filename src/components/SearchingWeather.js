@@ -25,7 +25,7 @@ function SearchingWeather(props) {
         />
         <button className="serching-weather__search" type="submit">Search</button>
       </form>
-      <span className="serching-weather__error" id="weather">Sorry, I can't find this city. Try again</span>
+      <span className={`serching-weather__error ${props.error ? 'serching-weather__error_active' : ''}`} id="weather">Sorry, I can't find this city. Try again</span>
     </section>
   )
 }
