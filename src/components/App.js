@@ -25,6 +25,7 @@ function App() {
       .then((data) => {
         ApiWeather.getForecastWeather(data)
           .then((data) => {
+            console.log(data);
             setForecast(data);
           })
           .catch((err) => console.log(err));

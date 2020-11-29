@@ -19,7 +19,7 @@ function SearchingResults(props) {
           <h3 className="results__current-temperature">
             {props.currentWeather.current.temperature} &#730;C
             <span className="results__span">&#32;&#47;&#32;</span>
-            {((props.currentWeather.current.temperature * 9) / 5) + 32} &#730;F
+            {Math.round(((props.currentWeather.current.temperature * 9) / 5) + 32)} &#730;F
           </h3>
           <p className="results__current-nature">{props.currentWeather.current.weather_descriptions[0]}</p>
         </div>

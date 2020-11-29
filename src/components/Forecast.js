@@ -17,7 +17,7 @@ function Forecast(props) {
   return (
     <div className="forecast">
       <time className="forecast__date">{dateFormat(props.forecast.date)}</time>
-      <h3 className="forecast__temperature">{props.forecast.temp2m.max} &#730;C&#32;&#47;&#32;+{((props.forecast.temp2m.max * 9) / 5) + 32} &#730;F</h3>
+      <h3 className="forecast__temperature">{props.forecast.temp2m.max} &#730;C&#32;&#47;&#32;{Math.round(((props.forecast.temp2m.max * 9) / 5) + 32)} &#730;F</h3>
       <p className="forecast__nature">{props.forecast.weather}</p>
     </div>
   )
