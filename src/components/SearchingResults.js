@@ -27,10 +27,13 @@ function SearchingResults(props) {
         <img className="results__image" src={props.currentWeather.current.weather_icons[0]} alt="weather" />
       </div>
       <div className="results__forecast-weather">
-        <Forecast />
-        <Forecast />
-        <Forecast />
-        <Forecast />
+        {
+          props.forecast !== null && props.forecast.map((item, index) => {
+            return (
+              <Forecast key={index} forecast={item} />
+            )
+          })
+        }
       </div>
     </section>
   )

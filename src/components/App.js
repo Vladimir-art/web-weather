@@ -7,6 +7,7 @@ import * as ApiWeather from './ApiWeather';
 function App() {
 
   const [current, setCurrent] = React.useState(null);
+  const [forecast, setForecast] = React.useState(null);
 
   function searchCurrentWeather(value, form) {
     console.log(value);
@@ -16,7 +17,15 @@ function App() {
           throw new Error('Введите корректные данные');
         } else {
           setCurrent(data);
+          return data;
         }
+      })
+      .then((data) => {
+        ApiWeather.getForecastWeather(data)
+          .then((data) => {
+            setForecast(data);
+          })
+          .catch((err) => console.log(err));
       })
       .catch((err) => console.log(err))
       .finally(() => {
@@ -30,6 +39,7 @@ function App() {
       <Main
         searchCurrent={searchCurrentWeather}
         currentWeather={current}
+        forecast={forecast}
       />
       <Footer />
     </div>

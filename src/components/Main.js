@@ -11,6 +11,7 @@ function Main(props) {
       {
         props.currentWeather !== null && <SearchingResults
           currentWeather={props.currentWeather}
+          forecast={props.forecast}
         />
       }
 
