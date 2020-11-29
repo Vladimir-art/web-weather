@@ -1,22 +1,30 @@
 import React from 'react';
 import Forecast from './Forecast';
-import sunny from '../images/sunny.svg';
+// import sunny from '../images/sunny.svg';
 
-function SearchingResults() {
+function SearchingResults(props) {
+
+  function dateFormat(str) {
+    const date = new Date(str);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' }
+    return date.toLocaleString('en', options);
+  }
+
+  console.log(props.currentWeather);
   return (
-    <section className="results">
+    <section className={`results ${props.currentWeather ? 'results_active' : ''}`}>
       <div className="results__current-weather">
         <div className="results__current-info">
-          <h2 className="results__current-title">New York</h2>
-          <time className="results__current-date">27 november, 2020</time>
+          <h2 className="results__current-title">{props.currentWeather.location.name}</h2>
+          <time className="results__current-date">{dateFormat(props.currentWeather.location.localtime)}</time>
           <h3 className="results__current-temperature">
-            +15 &#730;C
+            {props.currentWeather.current.temperature} &#730;C
             <span className="results__span">&#32;&#47;&#32;</span>
-            +{((+15 * 9) / 5) + 32} &#730;F
+            {((props.currentWeather.current.temperature * 9) / 5) + 32} &#730;F
           </h3>
-          <p className="results__current-nature">Sunny</p>
+          <p className="results__current-nature">{props.currentWeather.current.weather_descriptions[0]}</p>
         </div>
-        <img className="results__image" src={sunny} alt="weather" />
+        <img className="results__image" src={props.currentWeather.current.weather_icons[0]} alt="weather" />
       </div>
       <div className="results__forecast-weather">
         <Forecast />

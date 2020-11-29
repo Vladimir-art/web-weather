@@ -6,11 +6,20 @@ import * as ApiWeather from './ApiWeather';
 
 function App() {
 
+  const [current, setCurrent] = React.useState(null);
+
   function searchCurrentWeather(value, form) {
     console.log(value);
     ApiWeather.getCurrentWeather(value)
       .then((data) => {
-        console.log(data);
+        if (data.success === false) {
+          throw new Error('Введите корректные данные');
+        } else {
+          setCurrent(data);
+        }
+      })
+      .catch((err) => console.log(err))
+      .finally(() => {
         form.reset();
       })
   }
@@ -20,6 +29,7 @@ function App() {
       <Header />
       <Main
         searchCurrent={searchCurrentWeather}
+        currentWeather={current}
       />
       <Footer />
     </div>

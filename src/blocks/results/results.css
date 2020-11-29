@@ -15,4 +15,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  visibility: hidden;
+  transition: visibility .3s ease;
 }

@@ -3,12 +3,17 @@ import SearchingWeather from './SearchingWeather';
 import SearchingResults from './SearchingResults';
 
 function Main(props) {
-  return(
+  return (
     <main className="main">
       <SearchingWeather
         searchCurrent={props.searchCurrent}
       />
-      <SearchingResults />
+      {
+        props.currentWeather !== null && <SearchingResults
+          currentWeather={props.currentWeather}
+        />
+      }
+
     </main>
   )
 }
