@@ -8,3 +8,5 @@
 @import url(./blocks/results/results.css);
 @import url(./blocks/results/_active/results_active.css);
 @import url(./blocks/forecast/forecast.css);
+@import url(./blocks/preloader/preloader.css);
+@import url(./blocks/preloader/_inactive/preloader_inactive.css);

@@ -1,6 +1,7 @@
 .results__current-title {
   margin: 0 0 10px 0;
   width: 220px;
+  max-height: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 0;

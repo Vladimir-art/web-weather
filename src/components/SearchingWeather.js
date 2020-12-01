@@ -1,12 +1,14 @@
+import { observer } from 'mobx-react-lite';
 import React from 'react';
+import store from '../store/store';
 
-function SearchingWeather(props) {
+const SearchingWeather = observer(() => {
 
   const [cityName, setCityName] = React.useState('');
 
   function submitValue(e) {
     e.preventDefault();
-    props.searchCurrent(cityName, e.target);
+    store.searchCurrentWeather(cityName, e.target);
     setCityName('');
   }
 
@@ -25,9 +27,9 @@ function SearchingWeather(props) {
         />
         <button className="serching-weather__search" type="submit">Search</button>
       </form>
-      <span className={`serching-weather__error ${props.error ? 'serching-weather__error_active' : ''}`} id="weather">Sorry, I can't find this city. Try again</span>
+      <span className={`serching-weather__error ${store.errorText ? 'serching-weather__error_active' : ''}`} id="weather">Sorry, I can't find this city. Try again</span>
     </section>
   )
-}
+})
 
 export default SearchingWeather;

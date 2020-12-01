@@ -1,0 +1,15 @@
+/* @import url(./__notfound/preloader__notfound.css); */
+@import url(./__circle/preloader__circle.css);
+@import url(./__text/preloader__text.css);
+@import url(./_inactive/preloader_inactive.css);
+
+.preloader {
+  margin: 0 auto;
+  padding: 80px 0;
+  width: calc(100% - 645px);
+  max-height: 282px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

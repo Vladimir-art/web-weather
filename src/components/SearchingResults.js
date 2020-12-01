@@ -1,8 +1,9 @@
+import { observer } from 'mobx-react-lite';
 import React from 'react';
 import Forecast from './Forecast';
-// import sunny from '../images/sunny.svg';
+import store from '../store/store';
 
-function SearchingResults(props) {
+const SearchingResults = observer(() => {
 
   function dateFormat(str) {
     const date = new Date(str);
@@ -11,23 +12,23 @@ function SearchingResults(props) {
   }
 
   return (
-    <section className={`results ${props.currentWeather ? 'results_active' : ''}`}>
+    <section className={`results ${store.current ? 'results_active' : ''}`}>
       <div className="results__current-weather">
         <div className="results__current-info">
-          <h2 className="results__current-title">{props.currentWeather.location.name}</h2>
-          <time className="results__current-date">{dateFormat(props.currentWeather.location.localtime)}</time>
+          <h2 className="results__current-title">{store.current.location.name}</h2>
+          <time className="results__current-date">{dateFormat(store.current.location.localtime)}</time>
           <h3 className="results__current-temperature">
-            {props.currentWeather.current.temperature} &#730;C
+            {store.current.current.temperature} &#730;C
             <span className="results__span">&#32;&#47;&#32;</span>
-            {Math.round(((props.currentWeather.current.temperature * 9) / 5) + 32)} &#730;F
+            {Math.round(((store.current.current.temperature * 9) / 5) + 32)} &#730;F
           </h3>
-          <p className="results__current-nature">{props.currentWeather.current.weather_descriptions[0]}</p>
+          <p className="results__current-nature">{store.current.current.weather_descriptions[0]}</p>
         </div>
-        <img className="results__image" src={props.currentWeather.current.weather_icons[0]} alt="weather" />
+        <img className="results__image" src={store.current.current.weather_icons[0]} alt="weather" />
       </div>
       <div className="results__forecast-weather">
         {
-          props.forecast && props.forecast.dataseries.filter((data, index) => index > 0 && index <= 4).map((item, index) => {
+          store.forecast && store.forecast.dataseries.filter((data, index) => index > 0 && index <= 4).map((item, index) => {
             return (
               <Forecast key={index} forecast={item} />
             )
@@ -36,6 +37,6 @@ function SearchingResults(props) {
       </div>
     </section>
   )
-}
+})
 
 export default SearchingResults;

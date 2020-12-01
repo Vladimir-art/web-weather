@@ -1,24 +1,22 @@
 import React from 'react';
 import SearchingWeather from './SearchingWeather';
 import SearchingResults from './SearchingResults';
+import Preloader from './Preloader';
+import { observer } from 'mobx-react-lite';
+import store from '../store/store';
 
-function Main(props) {
+const Main = observer(() => {
+  console.log(store.current !== null && !store.preloader);
   return (
     <main className="main">
-      <SearchingWeather
-        searchCurrent={props.searchCurrent}
-        error={props.error}
-      />
+      <SearchingWeather />
       {
-        props.currentWeather !== null &&
-        <SearchingResults
-          currentWeather={props.currentWeather}
-          forecast={props.forecast}
-        />
+        (store.current !== null && !store.preloader) ?
+        <SearchingResults /> : <Preloader isActive={store.preloader} />
       }
 
     </main>
   )
-}
+})
 
 export default Main;
