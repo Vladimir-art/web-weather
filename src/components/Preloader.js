@@ -4,7 +4,7 @@ function Preloader(props) {
   return (
     <section className={`preloader ${props.isActive ? '' : 'preloader_inactive'}`}>
       <i className="preloader__circle"></i>
-      <p className="preloader__text">Идет поиск ...</p>
+      <p className="preloader__text">Searching ...</p>
     </section>
   );
 }
